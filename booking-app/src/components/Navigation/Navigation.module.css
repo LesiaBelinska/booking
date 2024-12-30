@@ -1,0 +1,18 @@
+.list {
+    display: flex;
+}
+
+.link {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff8c00;
+}
+
+.activeLink {
+    font-size: 36px;
+    color: #ff8c00;
+}
+
+.item:not(:last-child) {
+    margin-right: 20px;
+}
