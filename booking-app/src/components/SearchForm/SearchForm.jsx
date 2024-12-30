@@ -5,8 +5,6 @@ import { InputNumber, Button, Select, DatePicker } from "antd";
 
 import s from "./SearchForm.module.css";
 
-const { Option } = Select;
-
 const validationSchema = Yup.object({
   destination: Yup.string().required("Destination is required"),
   checkIn: Yup.date().required("Check-in date is required"),
