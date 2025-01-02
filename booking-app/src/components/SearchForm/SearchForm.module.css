@@ -41,6 +41,7 @@
   position: relative;
 }
 
+
 .formField .ant-select-selector.error,
 .formField .ant-picker.error,
 .formField .ant-input-number.error {
@@ -49,7 +50,8 @@
 }
 
 .errorMessage {
-  margin-top: 10px;
+  margin-top: 5px;
+  padding-left: 4px;
   color: red;
   font-size: 10px;
 }
