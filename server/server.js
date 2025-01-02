@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const { v4: uuidv4 } = require("uuid");
 const data = require('./db.json');
 
 const PORT = 3001;
@@ -9,7 +8,7 @@ const PORT = 3001;
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:8080", "http://localhost:3001"],
+  origin: ["http://localhost:8080", "http://localhost:3000"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
