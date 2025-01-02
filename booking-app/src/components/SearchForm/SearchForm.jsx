@@ -23,7 +23,7 @@ const initialValues = {
   children: 0,
 };
 
-const SearchForm = ({ onSubmit }) => {
+const SearchForm = ({ onSubmit, destinations }) => {
   const handleSubmit = (values, { resetForm }) => {
     console.log("Form values:", values);
     onSubmit(values);
@@ -39,40 +39,45 @@ const SearchForm = ({ onSubmit }) => {
       {({ values, setFieldValue }) => (
         <Form className={s.form}>
           <Select
+            className={s.select}
             placeholder="Destination"
             value={values.destination}
             onChange={(value) => setFieldValue("destination", value)}
-            className={s.select}
+            options={destinations.map((d) => ({
+              label: d.label,
+              value: d.label,
+              key: d.id
+            }))}
           ></Select>
 
           <DatePicker
+            className={s.datePicker}
             placeholder="Check in"
             value={values.checkIn}
             onChange={(date) => setFieldValue("checkIn", date)}
-            className={s.datePicker}
           />
 
           <DatePicker
+            className={s.datePicker}
             placeholder="Check out"
             value={values.checkOut}
             onChange={(date) => setFieldValue("checkOut", date)}
-            className={s.datePicker}
           />
 
           <InputNumber
+            className={s.inputNumber}
             placeholder="Adults"
             min={1}
             value={values.adults}
             onChange={(value) => setFieldValue("adults", value)}
-            className={s.inputNumber}
           />
 
           <InputNumber
+            className={s.inputNumber}
             placeholder="Children"
             min={0}
             value={values.children}
             onChange={(value) => setFieldValue("children", value)}
-            className={s.inputNumber}
           />
 
           <Button type="primary" htmlType="submit" className={s.submitButton}>
