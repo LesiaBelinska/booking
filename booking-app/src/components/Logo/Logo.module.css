@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ff8c00;
+}
+
+.text {
+  color: #ff8c00;
+  font-size: 28px;
+  font-weight: 500;
+}
