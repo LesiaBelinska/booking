@@ -1,18 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDestinations, searchHotels } from "../../redux/bookingThunk.js";
+import { useNavigate } from "react-router-dom";
 
+import { getDestinations, searchHotels } from "../../redux/bookingThunk.js";
 import SearchForm from "../../components/SearchForm/SearchForm.jsx";
-import HotelList from "../../components/HotelList/HotelList.jsx";
 
 import s from "./MainPage.module.css";
 
 const MainPage = () => {
-
   const dispatch = useDispatch();
-  const { destinations, hotels, loading, error } = useSelector(
-    (state) => state.booking
-  );
+  const { destinations } = useSelector((state) => state.booking);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getDestinations());
@@ -20,17 +18,13 @@ const MainPage = () => {
 
   const handleSearch = (values) => {
     dispatch(searchHotels(values.destination));
+    navigate("/hotels", { state: { searchCriteria: values } });
   };
 
   return (
     <div className={s.pageWrapper}>
       <SearchForm onSubmit={handleSearch} destinations={destinations} />
-      <div className={s.container}>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
-
-        {!loading && !error && hotels.length > 0 && <HotelList />}
-      </div>
+      <div className={s.container}></div>
     </div>
   );
 };
