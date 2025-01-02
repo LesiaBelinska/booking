@@ -1,0 +1,33 @@
+.hotelItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  width: 300px;
+}
+
+.image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.address,
+.details {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
