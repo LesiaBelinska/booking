@@ -3,7 +3,7 @@ import s from "./HotelsPage.module.css";
 const HotelsPage = () => {
   return (
     <div className={s.container}>
-      Hotels Page
+      <h3 className={s.title}>Hotels</h3>
     </div>
   )
 };
