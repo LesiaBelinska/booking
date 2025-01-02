@@ -1,9 +1,9 @@
 .form {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  gap: 15px;
+  align-items: stretch;
   border: 1px solid #e0e0e0;
-  padding: 10px;
+  padding: 20px;
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -34,4 +34,22 @@
 
 .submitButton:hover {
   background-color: #e07b00;
+}
+
+.formField {
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.formField .ant-select-selector.error,
+.formField .ant-picker.error,
+.formField .ant-input-number.error {
+  border: 1px solid red !important;
+  border-radius: 4px;
+}
+
+.errorMessage {
+  margin-top: 10px;
+  color: red;
+  font-size: 10px;
 }
