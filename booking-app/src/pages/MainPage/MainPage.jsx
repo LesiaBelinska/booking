@@ -24,7 +24,16 @@ const MainPage = () => {
   return (
     <div className={s.pageWrapper}>
       <SearchForm onSubmit={handleSearch} destinations={destinations} />
-      <div className={s.container}></div>
+      <div className={s.container}>
+        <h1 className={s.title}>Travel With Booking</h1>
+        <p className={s.text}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+          tempore, magni tempora dolorem maiores numquam maxime fuga culpa
+          accusamus incidunt sint quo quis atque eligendi, error iste corporis
+          totam quidem delectus debitis commodi cumque aperiam! Alias, cum unde
+          natus magnam voluptates ipsa porro adipisci eos.
+        </p>
+      </div>
     </div>
   );
 };

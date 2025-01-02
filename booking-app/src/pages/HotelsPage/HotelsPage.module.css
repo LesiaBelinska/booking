@@ -1,19 +1,30 @@
 .container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding-top: 40px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
 .title {
-    margin-bottom: 15px;
-    font-size: 26px;
-    font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 500;
 }
 
-.text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: justify;
+.backButton {
+  position: fixed;
+  left: 20px;
+  top: 120px;
+  background-color: #ff8c00;
+  color: #ffffff;
+  border: none;
+  padding: 5px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #e07b00;
 }
