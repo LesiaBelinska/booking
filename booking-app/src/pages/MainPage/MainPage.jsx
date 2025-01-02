@@ -25,11 +25,12 @@ const MainPage = () => {
   return (
     <div className={s.pageWrapper}>
       <SearchForm onSubmit={handleSearch} destinations={destinations} />
+      <div className={s.container}>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
 
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-
-      {!loading && !error && hotels.length > 0 && <HotelList />}
+        {!loading && !error && hotels.length > 0 && <HotelList />}
+      </div>
     </div>
   );
 };
