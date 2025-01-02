@@ -3,10 +3,12 @@ import s from "./MainPage.module.css";
 
 const MainPage = () => {
   return (
-    <div className={s.container}>
+    <>
       <SearchForm />
-      Main Page
-    </div>
+      <div className={s.container}>
+        Main Page
+      </div>
+    </>
   )
 };
 
