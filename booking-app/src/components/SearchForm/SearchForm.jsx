@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { InputNumber, Button, Select, DatePicker } from "antd";
+import PropTypes from "prop-types";
 
 import s from "./SearchForm.module.css";
 
@@ -121,6 +122,16 @@ const SearchForm = ({ onSubmit, destinations }) => {
       )}
     </Formik>
   );
+};
+
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  destinations: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default SearchForm;

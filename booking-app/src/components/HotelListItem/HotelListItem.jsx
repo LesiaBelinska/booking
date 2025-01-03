@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import s from "./HotelListItem.module.css";
 
 const HotelListItem = ({ hotel }) => {
@@ -14,6 +16,18 @@ const HotelListItem = ({ hotel }) => {
       </p>
     </div>
   );
+};
+
+HotelListItem.propTypes = {
+  hotel: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string,
+    address: PropTypes.string,
+    city: PropTypes.string,
+    state: PropTypes.string,
+    country_code: PropTypes.string,
+    image: PropTypes.string
+  }).isRequired,
 };
 
 export default HotelListItem;
